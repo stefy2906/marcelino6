@@ -6,7 +6,8 @@ const handlerAcessUser = () => {
         email:'stefany@gmail.com',
         token: 'token'
     };
-    if(responseIsUserAtuh.token==="token"){
+    const isTokenValidate =validateToken(responseIsUserAtuh.token);
+    if(isTokenValidate){
         Cookies.set('token',responseIsUserAtuh.token);
     }
 }
