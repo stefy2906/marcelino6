@@ -1,17 +1,20 @@
 'use client'
 
 import { handlerAcessUser } from "./functions/handlerAcessUser"
-export default function Login(){
+import {useRouter} from "next/navigation";
 
+export default function Login(){
+  const {push} = useRouter();
   const handlerLogin=(e)=>{
     e.preventDefaut();
     handlerAcessUser();
+    push('/pages/dashboard')
   }
 
   return(
     <div>
       <h1>Login</h1>
-      <form>
+      <form onSubmit={handlerLogin}>
         <input
         placeholder="E-mail"
         type="email"
