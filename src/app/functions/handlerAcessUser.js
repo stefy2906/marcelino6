@@ -1,5 +1,7 @@
+import Cookies from "js-cookie";
+
 const handlerAcessUser = () => {
-    alert("Handler Acess User")
+     Cookies.set('token','Este é um token!');
 }
 
 export {handlerAcessUser}
