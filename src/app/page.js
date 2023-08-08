@@ -1,5 +1,13 @@
 'use client'
+
+import { handlerAcessUser } from "./functions/handlerAcessUser"
 export default function Login(){
+
+  const handlerLogin=(e)=>{
+    e.preventDefaut();
+    handlerAcessUser();
+  }
+
   return(
     <div>
       <h1>Login</h1>
