@@ -1,6 +1,6 @@
 'use serve'
 
-import { validateToken } from "./functions/jsonwebtoken";
+import { validateToken } from "./app/functions/jsonwebtoken";
 
 export const middleware = (request) => {
     const token = request.cookies.get('token')?.value;
